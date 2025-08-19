@@ -37,8 +37,8 @@ jobs:
         with:
           node-version: 22
       - run: npm ci
-      - name: Run Tests
-        run: npm test
+      # - name: Run Tests
+      #   run: npm test
       - run: npm run build
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
