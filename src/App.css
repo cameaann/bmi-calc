@@ -1,42 +1,134 @@
+:root{
+  --font-size: 1.4rem;
+  --line-height: 1.5;
+
+  --primary-color: #4A71FC;
+  --main-text: #253347;
+  --grey-text: #5E6E85;
+}
+h1,h2,h3,h4,h5,h6,p,span {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  margin: 0;
+}
+html {
+  font-size: clamp(56.25%, 1vw + 55%, 75%);
+}
 #root {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  font-family: Inter, sans-serif;
+}
+body {
+  margin: 0;
+  font-size: 10px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 5rem;
   will-change: filter;
   transition: filter 300ms;
+  margin-bottom: 10rem;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.hero {
+  width: 100rem;
+  display: flex;
+  flex-direction: row;
+  padding: 3rem 5rem;
+  position: relative;
+  gap:8rem;
+  margin: 0 auto;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero::after {
+  content: "";
+  width: 70rem;
+  height: 55rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #ffffff 0%, #d6e6fe 100%);
+  border-radius: 0 0 3.5rem 3.5rem;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* margin: 0 auto; */
+  z-index: 20;
+}
+.hero-content > * {
+  text-align: left;
+  width: 40rem;
+}
+.hero-content h1 {
+  font-size: 5.2rem;
+  font-weight: semibold;
+  letter-spacing: -.5;
+  line-height: 1.1;
+  margin-bottom: 1.6rem;
+  margin-top: 0;
+  width: 42rem;
+  color: var(--main-text);
+}
+.hero-content p {
+  font-size: 1.4rem;
+  margin: 0;
+  color: var(--grey-text);
+}
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.calc-form {
+  z-index: 20;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  margin-top: 7rem;
+  border-radius: 16px;
+  box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);
+  -webkit-box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);
+  -moz-box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);
+  width:40rem;
+}
+/* BMI Result */
+.bmi-container{
+  display: flex;
+  flex-direction: column;
+  background-color: #345FF6;
+  color:#FFFFFF;
+  padding: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  border-radius: 1.6rem 9.9rem 9.9rem 1.6rem;
+}
+.bmi-container h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+.bmi-container p {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: left;
+}
+.bmi-container.bmi-result {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  gap: 5rem;
+}
+.bmi-container.bmi-container.bmi-result h3{
+  font-size: 1.6rem;
+}
+.bmi-container.bmi-container.bmi-result h1{
+  font-size: 6.4rem;
+}
+.bmi-container.bmi-container.bmi-result span{
+  font-size: 1.4rem;
+  align-self: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}

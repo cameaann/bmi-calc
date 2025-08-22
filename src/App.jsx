@@ -1,21 +1,16 @@
-import logo from '/logo.svg'
-import './App.css'
-import CalcForm from './components/Calc-form'
+import "./App.css";
+import Hero from "./components/Hero";
+import { CssVarsProvider } from "@mui/joy";
+import customTheme from "./styles/customTheme";
 
-
-const App = ()=>{
-
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={logo} className="logo" alt="Vite logo" />
-        </a>
-        <CalcForm/>
-
-      </div>
+    <CssVarsProvider theme={customTheme}>
+      <Hero />
+    </CssVarsProvider>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
