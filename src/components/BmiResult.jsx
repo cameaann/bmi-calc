@@ -48,7 +48,7 @@ const BmiResult = ({ bmi, height, unit }) => {
           </div>
           <span>
             Your BMI suggests {weight(bmi)}. Your ideal weight is between{" "}
-            {iw}
+            <b>{iw}</b>
           </span>
         </div>
       )}

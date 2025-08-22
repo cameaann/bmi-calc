@@ -3,7 +3,7 @@ import logo from "/logo.svg";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <section className="container hero">
       <div className="hero-content">
 		<a href="#" target="_blank">
           <img src={logo} className="logo" alt="Vite logo" />
@@ -17,7 +17,7 @@ const Hero = () => {
         </p>
       </div>
 	<CalcForm />
-    </div>
+    </section>
   );
 };
 

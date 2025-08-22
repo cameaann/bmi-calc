@@ -1,16 +1,22 @@
-:root{
+:root {
   --font-size: 1.4rem;
   --line-height: 1.5;
 
-  --primary-color: #4A71FC;
+  --primary-color: #4a71fc;
   --main-text: #253347;
-  --grey-text: #5E6E85;
+  --grey-text: #5e6e85;
 }
-h1,h2,h3,h4,h5,h6,p,span {
-  font-size: var(--font-size);
-  line-height: var(--line-height);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
   margin: 0;
 }
+
 html {
   font-size: clamp(56.25%, 1vw + 55%, 75%);
 }
@@ -31,14 +37,17 @@ body {
   transition: filter 300ms;
   margin-bottom: 10rem;
 }
-.hero {
+.container {
   width: 100rem;
   display: flex;
   flex-direction: row;
   padding: 3rem 5rem;
   position: relative;
-  gap:8rem;
+  gap: 8rem;
   margin: 0 auto;
+  height: 90vh;
+}
+.hero {
 }
 .hero::after {
   content: "";
@@ -61,27 +70,25 @@ body {
   text-align: left;
   width: 40rem;
 }
-.hero-content h1 {
+.hero-title {
   font-size: 5.2rem;
   font-weight: semibold;
-  letter-spacing: -.5;
+  letter-spacing: -0.5;
   line-height: 1.1;
   margin-bottom: 1.6rem;
   margin-top: 0;
   width: 42rem;
   color: var(--main-text);
 }
-.hero-content p {
+section p {
   font-size: 1.4rem;
   margin: 0;
   color: var(--grey-text);
+  text-align: left;
 }
-.hero-title {
-  font-size: 2.8rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
+
 .calc-form {
+  height: fit-content;
   z-index: 20;
   background-color: #ffffff;
   padding: 2.5rem;
@@ -90,14 +97,14 @@ body {
   box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);
   -webkit-box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);
   -moz-box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);
-  width:40rem;
+  width: 40rem;
 }
 /* BMI Result */
-.bmi-container{
+.bmi-container {
   display: flex;
   flex-direction: column;
-  background-color: #345FF6;
-  color:#FFFFFF;
+  background-color: #345ff6;
+  color: #ffffff;
   padding: 2rem;
   margin-top: 2rem;
   align-items: flex-start;
@@ -114,6 +121,7 @@ body {
   font-size: 1.2rem;
   margin: 0;
   text-align: left;
+  color: #ffffff;
 }
 .bmi-container.bmi-result {
   display: flex;
@@ -121,14 +129,34 @@ body {
   text-align: left;
   gap: 5rem;
 }
-.bmi-container.bmi-container.bmi-result h3{
+.bmi-container.bmi-container.bmi-result h3 {
   font-size: 1.6rem;
 }
-.bmi-container.bmi-container.bmi-result h1{
+.bmi-container.bmi-container.bmi-result h1 {
   font-size: 6.4rem;
 }
-.bmi-container.bmi-container.bmi-result span{
+.bmi-container.bmi-container.bmi-result span {
   font-size: 1.4rem;
   align-self: center;
+  margin-top: 2rem;
 }
 
+.section-title {
+  font-size: 4.2rem;
+  font-weight: semibold;
+  letter-spacing: -0.5;
+  line-height: 1.1;
+  margin-bottom: 1.6rem;
+  width: 42rem;
+  color: var(--main-text);
+  text-align: left;
+}
+
+.man {
+  height: 43.3rem;
+  width: 46.4rem;
+}
+
+.result-section {
+  align-items: center;
+}
