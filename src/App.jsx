@@ -4,6 +4,7 @@ import { CssVarsProvider } from "@mui/joy";
 import customTheme from "./styles/customTheme";
 import UserResults from "./components/UserResults";
 import TipsComponent from "./components/TipsComponent";
+import Limitations from "./components/Limitations";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Hero />
       <UserResults />
       <TipsComponent />
+      <Limitations />
     </CssVarsProvider>
     </>
   );

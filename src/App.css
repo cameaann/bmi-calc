@@ -13,7 +13,7 @@ h4,
 h5,
 h6,
 p,
-span {
+ul span {
   margin: 0;
 }
 
@@ -26,7 +26,6 @@ html {
   text-align: center;
   font-family: Inter, sans-serif;
   line-height: 1.5;
-
 }
 body {
   margin: 0;
@@ -47,9 +46,11 @@ body {
   position: relative;
   gap: 8rem;
   margin: 0 auto;
-  height: 90vh;
+  /* height: 90vh; */
 }
-.hero {
+.hero a {
+  display: block;
+  width: fit-content;
 }
 .hero::after {
   content: "";
@@ -77,12 +78,16 @@ body {
   font-weight: semibold;
   letter-spacing: -0.5;
   line-height: 1.1;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
   margin-top: 0;
-  width: 42rem;
+  /* width: 42rem; */
   color: var(--main-text);
 }
-section p {
+section {
+  margin: 10rem auto !important;
+}
+section p,
+.hero p {
   font-size: 1.4rem;
   margin: 0;
   color: var(--grey-text);
@@ -144,13 +149,22 @@ section p {
 }
 
 .section-title {
-  font-size: 4.2rem;
+  font-size: 4rem;
   font-weight: semibold;
   letter-spacing: -0.5;
   line-height: 1.1;
   margin-bottom: 1.6rem;
-  width: 42rem;
+  margin-top: 0rem;
+  margin: 2rem 0;
   color: var(--main-text);
+  text-align: left;
+}
+.result-section > div h1.section-title {
+  margin-top: 10rem;
+}
+.result-description {
+  font-size: 1.4rem;
+  color: var(--grey-text);
   text-align: left;
 }
 
@@ -160,14 +174,38 @@ section p {
 }
 
 .result-section {
+  position: relative;
   align-items: center;
-  /* line-height: 1.5; */
+}
+
+.left-line {
+  position: absolute;
+  top: -4rem;
+  right: 10rem;
 }
 
 /* Tips Section */
 .tips-container {
   display: flex;
   flex-direction: row;
+  padding: 0;
+  gap: 3rem;
+}
+.tips-container::after {
+  content: "";
+  width: 100%;
+  height: 35rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #d6fcfe 50%,
+    #d6e6fe 100%
+  );
+  border-radius: 3.5rem;
+  opacity: 30%;
 }
 
 .tip-card {
@@ -175,14 +213,14 @@ section p {
   display: flex;
   flex-direction: column;
   align-content: left;
-  padding: 2rem;
   margin: 1rem;
   width: 30rem;
   color: var(--grey-text);
+  z-index: 20;
 }
 
 .tip-card-title {
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-align: left;
   font-weight: bold;
   margin-top: 4.8rem;
@@ -192,4 +230,205 @@ section p {
 
 .tip-icon {
   align-self: flex-start;
+}
+/* LIMITATION SECTION */
+
+.limitation-grid {
+  justify-content: center;
+}
+
+.limit-description > * {
+  padding-top: 0;
+  max-width: 45rem;
+  text-align: left;
+}
+.limit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  max-width: 25rem;
+  color: var(--grey-text);
+  box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);
+  -webkit-box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);
+  -moz-box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);
+  border-radius: 2rem;
+}
+.limit-card-header {
+  display: flex;
+  gap: 1rem;
+  align-content: center;
+  margin-bottom: 2rem;
+}
+
+.limit-card-title {
+  font-size: 1.6rem;
+  text-align: left;
+  font-weight: bold;
+  color: var(--main-text);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding: 0;
+    gap: 4rem;
+  }
+  section {
+    margin: 5rem auto !important;
+  }
+
+  .hero-content {
+    align-items: center !important;
+    padding: 0rem 3rem;
+  }
+  .hero-content > p {
+    text-align: center;
+    width: 80%;
+  }
+  .hero::after {
+    width: 100%;
+  }
+  .logo {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    width: 55%;
+    text-align: center;
+  }
+  .calc-form {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  /* RESULT SECTION */
+  .result-section {
+    flex-direction: row;
+    justify-content: end;
+  }
+  .section-title {
+    font-size: 2.8rem;
+    padding: 0 3rem;
+  }
+  .man {
+    height: 30rem;
+    width: 32rem;
+  }
+  .left-line {
+    display: none;
+  }
+  .result-description {
+    padding: 0 3rem;
+  }
+
+  /* TIPS SECTION */
+  .tips-container {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  .tip-card {
+    flex-direction: row;
+    align-content: center;
+    gap: 2rem;
+    width: 90%;
+  }
+  .tip-card-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .tip-icon {
+    align-self: center;
+  }
+  .tips-container::after {
+    height: 40rem;
+    border-radius: 0;
+  }
+  .limit-description {
+    padding-top: 2rem;
+  }
+
+  .limit-description > h1 {
+    text-align: center;
+  }
+
+  .limit-description > p {
+    margin-bottom: 2rem;
+  }
+  .limit-card {
+    height: 15.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .result-section {
+    flex-direction: column;
+  }
+  .result-section > div h1.section-title {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .hero-content {
+    padding: 0 1rem;
+  }
+  .hero-title {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+
+  .bmi-container {
+    border-radius: 1.6rem;
+  }
+  .bmi-container.bmi-result {
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+  }
+  .bmi-container.bmi-container.bmi-result span {
+    margin-top: 0.5rem;
+  }
+  .section-title {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  .result-section {
+    flex-direction: column;
+  }
+  .result-section > div h1.section-title {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .tip-card {
+    flex-direction: column;
+  }
+  .tip-icon {
+    align-self: flex-start;
+  }
+
+  .tips-container::after {
+    height: fit-content;
+  }
+  .limit-description > h1 {
+    margin: 2rem auto;
+  }
+  .limit-description > p {
+    padding: 0rem 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .limit-card {
+    height: 17.5rem;
+    margin: 0 1rem;
+  }
+  .man {
+    height: 25rem;
+    width: 27rem;
+  }
 }

@@ -3,9 +3,9 @@ import logo from "/logo.svg";
 
 const Hero = () => {
   return (
-    <section className="container hero">
+    <div className="container hero">
       <div className="hero-content">
-		<a href="#" target="_blank">
+        <a href="#" target="_blank">
           <img src={logo} className="logo" alt="Vite logo" />
         </a>
         <h1 className="hero-title">Body Mass Index Calculator</h1>
@@ -16,8 +16,8 @@ const Hero = () => {
           your overall health and well-being.
         </p>
       </div>
-	<CalcForm />
-    </section>
+      <CalcForm />
+    </div>
   );
 };
 
