@@ -37,6 +37,7 @@ body {
   will-change: filter;
   transition: filter 300ms;
   margin-bottom: 10rem;
+  margin-top: 5rem;
 }
 .container {
   width: 100rem;
@@ -55,7 +56,7 @@ body {
 .hero::after {
   content: "";
   width: 70rem;
-  height: 55rem;
+  height: 60rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -71,7 +72,7 @@ body {
 }
 .hero-content > * {
   text-align: left;
-  width: 40rem;
+  width: 42rem;
 }
 .hero-title {
   font-size: 5.2rem;
@@ -80,7 +81,7 @@ body {
   line-height: 1.1;
   margin-bottom: 2rem;
   margin-top: 0;
-  /* width: 42rem; */
+  /* width: fit-content; */
   color: var(--main-text);
 }
 section {
@@ -99,7 +100,7 @@ section p,
   z-index: 20;
   background-color: #ffffff;
   padding: 2.5rem;
-  margin-top: 7rem;
+  margin-top: 13rem;
   border-radius: 16px;
   box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);
   -webkit-box-shadow: 32px 16px 56px 0px rgba(143, 174, 207, 0.25);

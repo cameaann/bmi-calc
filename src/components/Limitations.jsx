@@ -10,7 +10,7 @@ const Limitations = () => {
       <Grid container justifyContent={{ xs: "center", md: "start" }} spacing={{xs: 0, sm: 3.5}} rowSpacing={2}>
         <Grid item size={{ sx: 12, md: 8 }} sx={{ marginRight: { sm: "0", md: "10rem" }, padding: { sm: "1rem"} }}>
           <div className="limit-description">
-            <h1 className="section-title">Limitations of BMI</h1>
+            <h2 className="section-title">Limitations of BMI</h2>
             <p>
               Although BMI is often a practical indicator of healthy weight, it
               is not suited for every person. Specific groups should carefully

@@ -16,7 +16,7 @@ const UserResults = () => {
       </picture>
 
       <div>
-        <h1 className="section-title">What your BMI result means</h1>
+        <h2 className="section-title">What your BMI result means</h2>
         <p className="result-description">
           {resultText}
           Maintaining a healthy weight may lower your chances of experiencing
