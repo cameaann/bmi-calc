@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/cameaann/bmi-calc)
-- Live Site URL: [Add live site URL here](https://cameaann.github.io/bmi-calc/)
+- Solution URL: https://github.com/cameaann/bmi-calc
+- Live Site URL: https://cameaann.github.io/bmi-calc/
 
 ### Built with
 
