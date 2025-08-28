@@ -22,10 +22,10 @@ const iconMap = {
 export const getIcon = (name) => iconMap[name] || '';
 
 const BMI_CATEGORIES = {
-  UNDERWEIGHT: 'A BMI range of under 18.5 is considered a "underweight" ',
-  NORMAL: 'A BMI range of 18.5 to 24.9 is considered a "healthy weight" ',
-  OVERWEIGHT: 'A BMI range of 25 to 29.9 is considered "overweight" ',
-  OBESE: 'A BMI of 30 or greater is considered "obese" ',
+  UNDERWEIGHT: 'A BMI range of under 18.5 is considered a "underweight". ',
+  NORMAL: 'A BMI range of 18.5 to 24.9 is considered a "healthy weight". ',
+  OVERWEIGHT: 'A BMI range of 25 to 29.9 is considered "overweight". ',
+  OBESE: 'A BMI of 30 or greater is considered "obese". ',
 };
 
 export const getBMIResult = (bmi) => {
