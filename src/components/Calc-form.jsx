@@ -2,11 +2,13 @@ import { Radio, RadioGroup, FormControl, Box, Typography } from "@mui/joy";
 import { useState, useEffect } from "react";
 import InputField from "./InputField";
 import BmiResult from "./BmiResult";
+import { useContext } from "react";
+import { BMIContext } from "./bmiContext";
 
 const CalcForm = () => {
+  const { height, weight, setHeight, setWeight, calculateBMI, setBMI, bmi } =
+    useContext(BMIContext);
   const [unit, setUnit] = useState("metric");
-  const [height, setHeight] = useState("");
-  const [weight, setWeight] = useState("");
 
   const [imperial, setImperial] = useState({
     feet: "",
@@ -19,10 +21,16 @@ const CalcForm = () => {
     height: "",
     weight: "",
   });
-  const [bmi, setBmi] = useState(null);
 
   useEffect(() => {
-    setBmi(null);
+    setMetric({ height: "", weight: "" });
+    setImperial({ feet: "", inches: "", stones: "", pounds: "" });
+    setHeight(0);
+    setWeight(0);
+    setBMI(0);
+  }, [unit, setHeight, setWeight, setBMI]);
+
+  useEffect(() => {
     let h = 0;
     let w = 0;
 
@@ -38,9 +46,9 @@ const CalcForm = () => {
     setWeight(w);
 
     if (w && h) {
-    setBmi(Number(weight / (height / 100) ** 2).toFixed(1));
-  }
-  }, [imperial, metric, unit, weight, height]);
+      calculateBMI();
+    }
+  }, [imperial, metric, unit, setHeight, setWeight, calculateBMI]);
 
   return (
     <form className="calc-form">

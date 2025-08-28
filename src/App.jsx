@@ -5,15 +5,18 @@ import customTheme from "./styles/customTheme";
 import UserResults from "./components/UserResults";
 import TipsComponent from "./components/TipsComponent";
 import Limitations from "./components/Limitations";
+import { BMIProvider } from "./components/bmiProvider";
 
 const App = () => {
   return (
     <>
     <CssVarsProvider theme={customTheme}>
-      <Hero />
-      <UserResults />
-      <TipsComponent />
-      <Limitations />
+      <BMIProvider>
+        <Hero />
+        <UserResults />
+        <TipsComponent />
+        <Limitations />
+      </BMIProvider>
     </CssVarsProvider>
     </>
   );

@@ -36,7 +36,7 @@ export default function InputField({ label, units = "", onChange, value }) {
         onChange={onChange}
         size="lg"
         className={classes.input}
-		value={value}
+        value={value}
         endDecorator={
           <Typography className={classes.endDecorator}>{units}</Typography>
         }

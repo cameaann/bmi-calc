@@ -1,7 +1,4 @@
-import { Typography, Box } from "@mui/joy";
-
 const BmiResult = ({ bmi, height, unit }) => {
-
   const weight = (bmi) =>
     bmi < 18.5
       ? "underweight"
@@ -23,7 +20,7 @@ const BmiResult = ({ bmi, height, unit }) => {
         const stones = Math.floor(totalLbs / 14);
         const pounds = Math.round(totalLbs % 14);
         return `${stones} st ${pounds} lbs`;
-  };
+      };
       return `${kgToStLbs(minKg)} – ${kgToStLbs(maxKg)}`;
     } else {
       return `${minKg.toFixed(1)} kgs - ${maxKg.toFixed(1)} kgs`;
