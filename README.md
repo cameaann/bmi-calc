@@ -47,5 +47,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://cameaann.github.io/sha/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/cameaann)
+- Website - [Anna Shestakova](https://cameaann.github.io/sha/)
+- Frontend Mentor - [@cameaann](https://www.frontendmentor.io/profile/cameaann)
