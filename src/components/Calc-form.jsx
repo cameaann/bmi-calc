@@ -53,12 +53,13 @@ const CalcForm = () => {
   return (
     <form className="calc-form">
       <Typography
-        level="h3"
+        level="h1"
         sx={{
           mb: 2,
           textAlign: "left",
           fontSize: "2rem",
           color: "var(--main-text)",
+          fontWeight: "600",
         }}
       >
         {" "}
