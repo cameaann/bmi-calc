@@ -32,7 +32,7 @@ const BmiResult = ({ bmi, height, unit }) => {
     <>
       {!bmi ? (
         <div className="bmi-container">
-          <h3>Welcome!</h3>
+          <h1>Welcome!</h1>
           <p>
             Enter your height and weight and you'll see your BMI result here
           </p>
@@ -40,7 +40,7 @@ const BmiResult = ({ bmi, height, unit }) => {
       ) : (
         <div className="bmi-container bmi-result">
           <div>
-            <h3>Your BMI is ...</h3>
+            <h2>Your BMI is ...</h2>
             <h1>{bmi}</h1>
           </div>
           <span>
